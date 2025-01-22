@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row g-3 m-5 p-5">
+    <h1 class="text-center pt-3">PORTFOLIO SECTION</h1>
+    <div class="mb-4 icon d-flex justify-content-center align-items-center">
+      <i class="fa-lg fa-solid fa-star"></i>
+    </div>
+
+    @for( photo of photos ; track $index ){
+    <div class="col-md-6 col-lg-4">
+      <figure
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        class="position-relative overflow-hidden"
+        (click)="image(photo)"
+      >
+        <img [src]="photo" class="w-100" alt="My Work 1" />
+        <figcaption class="position-absolute">
+          <div class="work-overlay text-center">
+            <div class="icons">
+              <i class="text-white fa-solid fa-plus fa-6x"></i>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img [src]="imgSrc" class="img-fluid" alt="Selected Work" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    }
+  </div>
+</div>

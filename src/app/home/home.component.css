@@ -1,0 +1,29 @@
+.home {
+  height: 500px;
+  background-color: #1abc9c;
+}
+
+.icon {
+  position: relative;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background-color: white;
+  top: 120%;
+  right: 38%;
+  margin-bottom: 10px;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background-color: white;
+  top: 120%;
+  left: 38%;
+  margin-bottom: 10px;
+}
